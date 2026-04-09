@@ -307,6 +307,16 @@
     .form-success .check { font-size: 48px; margin-bottom: 12px; }
     .form-success h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
     .form-success p { color: rgba(255,255,255,.6); font-size: 14px; }
+
+    .ticker-wrap { position: relative; }
+    .ticker-track {
+      display: flex; gap: 32px; width: max-content;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-track span { font-size: 14px; font-weight: 500; color: var(--navy); }
+    @keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
   </style>
 </head>
 <body>
@@ -325,14 +335,14 @@
     <div class="nav-dropdown">
       <a href="#locations" class="nav-links-a">Locations ▾</a>
       <div class="nav-dropdown-menu">
-        <a href="/westlake/">Westlake & West Lake Hills</a>
-        <a href="/south-austin/">South Austin</a>
-        <a href="/round-rock/">Round Rock & North Austin</a>
-        <a href="/cedar-park/">Cedar Park & Leander</a>
-        <a href="/east-austin/">East Austin & Mueller</a>
-        <a href="/pflugerville/">Pflugerville & Hutto</a>
-        <a href="/south-congress/">South Congress & Travis Heights</a>
-        <a href="/domain-north-austin/">Domain & North Austin</a>
+        <a href="/agn-services-demo/westlake/">Westlake & West Lake Hills</a>
+        <a href="/agn-services-demo/south-austin/">South Austin</a>
+        <a href="/agn-services-demo/round-rock/">Round Rock & North Austin</a>
+        <a href="/agn-services-demo/cedar-park/">Cedar Park & Leander</a>
+        <a href="/agn-services-demo/east-austin/">East Austin & Mueller</a>
+        <a href="/agn-services-demo/pflugerville/">Pflugerville & Hutto</a>
+        <a href="/agn-services-demo/south-congress/">South Congress & Travis Heights</a>
+        <a href="/agn-services-demo/domain-north-austin/">Domain & North Austin</a>
       </div>
     </div>
     <a href="#quote" class="nav-cta">Get a Free Quote</a>
@@ -537,17 +547,11 @@
         <div class="section-label">Where We Work</div>
         <h2 class="section-title">Proudly Serving Austin &amp; Central Texas</h2>
         <p class="section-sub">AGN Services works throughout the greater Austin metro and surrounding Central Texas communities. Not sure if we cover your area? Just ask.</p>
-        <div class="area-cities" style="margin-top:28px">
-          <div class="city-tag">Austin</div>
-          <div class="city-tag">Round Rock</div>
-          <div class="city-tag">Cedar Park</div>
-          <div class="city-tag">Pflugerville</div>
-          <div class="city-tag">Georgetown</div>
-          <div class="city-tag">Leander</div>
-          <div class="city-tag">Kyle</div>
-          <div class="city-tag">Buda</div>
-          <div class="city-tag">San Marcos</div>
-          <div class="city-tag">Hutto</div>
+        <div class="ticker-wrap" style="margin-top:28px;overflow:hidden;background:var(--light);border-radius:10px;border:1px solid var(--border);padding:12px 0">
+          <div class="ticker-track">
+            <span>📍 Austin</span><span>📍 Westlake</span><span>📍 Round Rock</span><span>📍 Cedar Park</span><span>📍 Pflugerville</span><span>📍 Georgetown</span><span>📍 Leander</span><span>📍 Kyle</span><span>📍 Buda</span><span>📍 Hutto</span><span>📍 East Austin</span><span>📍 South Congress</span><span>📍 Travis Heights</span><span>📍 San Marcos</span><span>📍 Mueller</span><span>📍 Domain</span><span>📍 Oak Hill</span><span>📍 Manchaca</span>
+            <span>📍 Austin</span><span>📍 Westlake</span><span>📍 Round Rock</span><span>📍 Cedar Park</span><span>📍 Pflugerville</span><span>📍 Georgetown</span><span>📍 Leander</span><span>📍 Kyle</span><span>📍 Buda</span><span>📍 Hutto</span><span>📍 East Austin</span><span>📍 South Congress</span><span>📍 Travis Heights</span><span>📍 San Marcos</span><span>📍 Mueller</span><span>📍 Domain</span><span>📍 Oak Hill</span><span>📍 Manchaca</span>
+          </div>
         </div>
       </div>
       <div class="map-placeholder">
@@ -567,42 +571,42 @@
     <h2 class="section-title">Serving Neighborhoods Across Austin &amp; Central Texas</h2>
     <p class="section-sub">AGN Services makes house calls throughout the greater Austin area. Select your neighborhood to see local information and get a quote.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:40px">
-      <a href="/westlake/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/westlake/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">Westlake &amp; West Lake Hills</span>
         <span style="font-size:12px;color:var(--gray)">Premium kitchen &amp; bath remodels</span>
       </a>
-      <a href="/south-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/south-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">South Austin</span>
         <span style="font-size:12px;color:var(--gray)">Oak Hill, Manchaca &amp; beyond</span>
       </a>
-      <a href="/round-rock/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/round-rock/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">Round Rock &amp; North Austin</span>
         <span style="font-size:12px;color:var(--gray)">Family home remodeling specialists</span>
       </a>
-      <a href="/cedar-park/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/cedar-park/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">Cedar Park &amp; Leander</span>
         <span style="font-size:12px;color:var(--gray)">New home updates &amp; upgrades</span>
       </a>
-      <a href="/east-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/east-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">East Austin &amp; Mueller</span>
         <span style="font-size:12px;color:var(--gray)">Historic &amp; new home renovations</span>
       </a>
-      <a href="/pflugerville/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/pflugerville/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">Pflugerville &amp; Hutto</span>
         <span style="font-size:12px;color:var(--gray)">Affordable, professional remodeling</span>
       </a>
-      <a href="/south-congress/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/south-congress/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">South Congress &amp; Travis Heights</span>
         <span style="font-size:12px;color:var(--gray)">Historic home restoration experts</span>
       </a>
-      <a href="/domain-north-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="/agn-services-demo/domain-north-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:20px">🏡</span>
         <span style="font-weight:700;color:var(--navy);font-size:15px">Domain &amp; North Austin</span>
         <span style="font-size:12px;color:var(--gray)">For busy professionals near the Tech Corridor</span>
