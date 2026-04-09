@@ -117,6 +117,21 @@
     .hero-stat .num { font-size: 2rem; font-weight: 800; color: var(--gold2); line-height: 1; }
     .hero-stat .label { font-size: 13px; color: rgba(255,255,255,.55); margin-top: 3px; }
 
+
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-links-a { color: rgba(255,255,255,.8); text-decoration: none; font-size: 14px; font-weight: 500; cursor: pointer; padding: 8px 0; transition: color .2s; }
+    .nav-links-a:hover { color: var(--gold2); }
+    .nav-dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 14px); right: 0;
+      background: var(--navy); border: 1px solid rgba(200,146,42,.25);
+      border-radius: 12px; min-width: 240px; overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,.35); z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 11px 18px; color: rgba(255,255,255,.8); text-decoration: none; font-size: 13px; font-weight: 500; transition: background .15s, color .15s; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .nav-dropdown-menu a:last-child { border-bottom: none; }
+    .nav-dropdown-menu a:hover { background: rgba(200,146,42,.15); color: var(--gold2); }
+
     /* ── Trust bar ── */
     .trust-bar {
       background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
@@ -307,6 +322,19 @@
     <a href="#why">Why Us</a>
     <a href="#reviews">Reviews</a>
     <a href="#area">Service Area</a>
+    <div class="nav-dropdown">
+      <a href="#locations" class="nav-links-a">Locations ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="/westlake/">Westlake & West Lake Hills</a>
+        <a href="/south-austin/">South Austin</a>
+        <a href="/round-rock/">Round Rock & North Austin</a>
+        <a href="/cedar-park/">Cedar Park & Leander</a>
+        <a href="/east-austin/">East Austin & Mueller</a>
+        <a href="/pflugerville/">Pflugerville & Hutto</a>
+        <a href="/south-congress/">South Congress & Travis Heights</a>
+        <a href="/domain-north-austin/">Domain & North Austin</a>
+      </div>
+    </div>
     <a href="#quote" class="nav-cta">Get a Free Quote</a>
   </div>
   <div class="hamburger" onclick="toggleMenu()" id="hamburger">
@@ -532,6 +560,57 @@
   </div>
 </section>
 
+<!-- Locations Grid -->
+<section id="locations" style="background:var(--white);padding:80px 24px">
+  <div class="section-inner">
+    <div class="section-label">Service Areas</div>
+    <h2 class="section-title">Serving Neighborhoods Across Austin &amp; Central Texas</h2>
+    <p class="section-sub">AGN Services makes house calls throughout the greater Austin area. Select your neighborhood to see local information and get a quote.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:40px">
+      <a href="/westlake/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">Westlake &amp; West Lake Hills</span>
+        <span style="font-size:12px;color:var(--gray)">Premium kitchen &amp; bath remodels</span>
+      </a>
+      <a href="/south-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">South Austin</span>
+        <span style="font-size:12px;color:var(--gray)">Oak Hill, Manchaca &amp; beyond</span>
+      </a>
+      <a href="/round-rock/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">Round Rock &amp; North Austin</span>
+        <span style="font-size:12px;color:var(--gray)">Family home remodeling specialists</span>
+      </a>
+      <a href="/cedar-park/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">Cedar Park &amp; Leander</span>
+        <span style="font-size:12px;color:var(--gray)">New home updates &amp; upgrades</span>
+      </a>
+      <a href="/east-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">East Austin &amp; Mueller</span>
+        <span style="font-size:12px;color:var(--gray)">Historic &amp; new home renovations</span>
+      </a>
+      <a href="/pflugerville/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">Pflugerville &amp; Hutto</span>
+        <span style="font-size:12px;color:var(--gray)">Affordable, professional remodeling</span>
+      </a>
+      <a href="/south-congress/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">South Congress &amp; Travis Heights</span>
+        <span style="font-size:12px;color:var(--gray)">Historic home restoration experts</span>
+      </a>
+      <a href="/domain-north-austin/" style="display:flex;flex-direction:column;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;transition:.2s;border-left:4px solid var(--gold)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:20px">🏡</span>
+        <span style="font-weight:700;color:var(--navy);font-size:15px">Domain &amp; North Austin</span>
+        <span style="font-size:12px;color:var(--gray)">For busy professionals near the Tech Corridor</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Quote Form -->
 <section id="quote">
   <div class="section-inner">
@@ -617,24 +696,6 @@
 </section>
 
 
-<!-- Service Area Location Pages -->
-<section style="background:var(--cream)">
-  <div class="section-inner">
-    <div class="section-label">Local Pages</div>
-    <h2 class="section-title">Serving Neighborhoods Across Austin</h2>
-    <p class="section-sub">AGN Services provides expert remodeling across the greater Austin area. Find your neighborhood for local tips and information.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:36px">
-      <a href="/westlake/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 Westlake & West Lake Hills</a>
-      <a href="/south-austin/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 South Austin</a>
-      <a href="/round-rock/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 Round Rock & North Austin</a>
-      <a href="/cedar-park/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 Cedar Park & Leander</a>
-      <a href="/east-austin/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 East Austin & Mueller</a>
-      <a href="/pflugerville/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 Pflugerville & Hutto</a>
-      <a href="/south-congress/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 South Congress & Travis Heights</a>
-      <a href="/domain-north-austin/" style="display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:.2s;color:var(--navy);font-weight:600;font-size:14px" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🏡 Domain & North Austin</a>
-    </div>
-  </div>
-</section>
 
 <!-- Footer -->
 <footer>
