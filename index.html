@@ -308,13 +308,13 @@
     .form-success h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
     .form-success p { color: rgba(255,255,255,.6); font-size: 14px; }
 
-    .ticker-wrap { position: relative; }
+    .ticker-wrap { overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box; }
     .ticker-track {
       display: flex; gap: 32px; width: max-content;
       animation: ticker 30s linear infinite;
-      white-space: nowrap;
+      white-space: nowrap; will-change: transform;
     }
-    .ticker-track span { font-size: 14px; font-weight: 500; color: var(--navy); }
+    .ticker-track span { font-size: 14px; font-weight: 500; color: var(--navy); flex-shrink: 0; }
     @keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
     .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
   </style>
@@ -547,7 +547,7 @@
         <div class="section-label">Where We Work</div>
         <h2 class="section-title">Proudly Serving Austin &amp; Central Texas</h2>
         <p class="section-sub">AGN Services works throughout the greater Austin metro and surrounding Central Texas communities. Not sure if we cover your area? Just ask.</p>
-        <div class="ticker-wrap" style="margin-top:28px;overflow:hidden;background:var(--light);border-radius:10px;border:1px solid var(--border);padding:12px 0">
+        <div class="ticker-wrap" style="margin-top:28px;background:var(--light);border-radius:10px;border:1px solid var(--border);padding:12px 0;max-width:100%;overflow:hidden">
           <div class="ticker-track">
             <span>📍 Austin</span><span>📍 Westlake</span><span>📍 Round Rock</span><span>📍 Cedar Park</span><span>📍 Pflugerville</span><span>📍 Georgetown</span><span>📍 Leander</span><span>📍 Kyle</span><span>📍 Buda</span><span>📍 Hutto</span><span>📍 East Austin</span><span>📍 South Congress</span><span>📍 Travis Heights</span><span>📍 San Marcos</span><span>📍 Mueller</span><span>📍 Domain</span><span>📍 Oak Hill</span><span>📍 Manchaca</span>
             <span>📍 Austin</span><span>📍 Westlake</span><span>📍 Round Rock</span><span>📍 Cedar Park</span><span>📍 Pflugerville</span><span>📍 Georgetown</span><span>📍 Leander</span><span>📍 Kyle</span><span>📍 Buda</span><span>📍 Hutto</span><span>📍 East Austin</span><span>📍 South Congress</span><span>📍 Travis Heights</span><span>📍 San Marcos</span><span>📍 Mueller</span><span>📍 Domain</span><span>📍 Oak Hill</span><span>📍 Manchaca</span>
